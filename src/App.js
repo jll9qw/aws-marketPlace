@@ -22,6 +22,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
+    console.dir(AmplifyTheme)
     this.getUserData();
     Hub.listen("auth", this, "onHubCapsule");
   }
@@ -148,6 +149,40 @@ const theme = {
     backgroundColor: "var(--squidInk)"
   }
 };
+
+
+// custom theme
+
+// const theme = {
+//   ...AmplifyTheme,
+//   button: {
+//     ...AmplifyTheme.button,
+//     borderRadius: "73px",
+//     backgroundColor: "#a4d9ff",
+//     boxShadow: "17px 17px 34px #3a7ea5, -17px -17px 34px #70f4ff",
+//   },
+//   input: {
+//     ...AmplifyTheme.input,
+//     borderRadius: "73px",
+//   },
+//   sectionFooter: {
+//     ...AmplifyTheme.sectionFooter,
+//     borderRadius: "73px",
+//     backgroundColor: "#a4d9ff",
+//   },
+//   sectionHeader: {
+//     ...AmplifyTheme.sectionHeader,
+//     borderRadius: "73px",
+//     backgroundColor: "#a4d9ff",
+//     margin: "0 auto",
+//   },
+//   sectionFooterSecondaryContent: {
+//     ...AmplifyTheme.sectionFooterSecondaryContent,
+//     textAlign: "center",
+//     margin: "0 auto",
+//   },
+// };
+
 
 // export default withAuthenticator(App, true, [], null, theme);
 export default App;
